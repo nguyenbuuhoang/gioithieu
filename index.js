@@ -1,6 +1,5 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-
 const app = express();
 
 //Set up Handlebars view engine
@@ -16,6 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // Khởi động server
-app.listen(3000, () => {
-  console.log('Server is running at http://localhost:3000');
+const PORT = process.env.PORT || 8001;
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
